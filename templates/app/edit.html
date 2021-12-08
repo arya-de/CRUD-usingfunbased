@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>edit</title>
+</head>
+<body>
+<h1>welcome  {{ studd.fname }}</h1><br>
+<form action="/update/{{ studd.sid }}" method="POST">
+    {% csrf_token %}
+    Firstname
+    <input type="text" name="fname" value="{{ studd.fname }}"><br><br>
+    Lastname
+    <input type="text" name="lname" value="{{ studd.lname }}"><br><br>
+    Age
+    <input type="text" name="age" value="{{ studd.age }}"><br><br>
+    Email
+    <input type="email" name="email" value="{{ studd.email }}"><br><br>
+    <button type="submit">Update</button>
+</form>
+</body>
+</html>
